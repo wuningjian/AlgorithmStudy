@@ -5,16 +5,36 @@
 #include <iostream>
 #include "SkillListClass.h"
 #include "BinarySearch.h"
+#include "Array.cpp"
 
 int main()
 {
-    std::cout << "Hello World!\n请输入目标值和精度："; 
+	int end_input;
+    /*std::cout << "Hello World!\n请输入目标值和精度："; 
 
 	BinarySearch bSearchObj = BinarySearch();
 	double target, acc;
 	std::cin >> target >> acc;
 	std::cout << bSearchObj.bsearchSqrt(target, acc) << std::endl;
-	std::cin >> target;
+	std::cin >> target;*/
+
+	Array<int> test_array = *new Array<int>;
+	test_array.init();
+	test_array.add(1);
+	test_array.add(3);
+	test_array.add(6);
+	test_array.add(7);
+	test_array.add(4);
+	test_array.pringArray();
+
+	test_array.insert(99, 5);
+	test_array.pringArray();
+
+	int item = test_array.deleteItem(7);
+	test_array.pringArray();
+	std::cout << item << "被删除了" << endl;
+
+	std::cin >> end_input;
 	return 0;
 }
 
